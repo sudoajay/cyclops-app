@@ -9,7 +9,9 @@
     "web": "expo start --web",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,html}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,html}\"",
+    "git": "git add . && git commit -m",
+    "push": "git push"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.2",
