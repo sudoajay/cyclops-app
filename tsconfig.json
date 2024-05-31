@@ -1,6 +1,32 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      //We will have to add the same thing in babel.config.js
+      "@src/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@context/*": ["src/contexts/*"],
+      "@screens/*": ["src/screens/*"]
+    }
+  },
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
